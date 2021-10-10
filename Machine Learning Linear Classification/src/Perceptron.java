@@ -31,12 +31,14 @@ public class Perceptron {
     public static double[] train_model() {
          //weight_decision(); //decomment when need to use when training the model to find the weight
 
-        double x_weight = 0.32833; // it will store the value for the weight for x
-        double y_weight = 0.001; // it will store the value or the weight for y
-        // double x_weight = weight[0]; //decomment in case of training
-        // double y_weight = weight[1]; //decomment in case of training
+        double x_weight = 0.2321; // it will store the value for the weight for x
+        double y_weight = 0.0947; // it will store the value or the weight for y
+
+         //double x_weight = weight[0]; //decomment in case of training
+         //double y_weight = weight[1]; //decomment in case of training
         System.out.println("Weight_x = " + x_weight);
         System.out.println("Weight_y = " + y_weight);
+       
         // Weighted sum formula
         for (int i = 0; i < weighted_sum.length; i++) {
             double xw_sum = 0.0; // x * X weight
@@ -64,5 +66,22 @@ public class Perceptron {
         }
 
         return predictions;
+    }
+
+
+    public static void epochs(){
+
+        int epochs = 0;
+        for(int i = 0; i < Lab1.points.length; i++){
+
+            if(Perceptron.predictions[i] != (char)Lab1.points[i][2]){
+                System.out.println("Epoch Number: " + epochs);
+                train_model();
+                prediction(weighted_sum);
+                i = 0;
+                epochs++;
+            }
+
+        }
     }
 }

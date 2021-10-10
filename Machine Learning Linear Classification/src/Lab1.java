@@ -12,7 +12,7 @@ public class Lab1 {
         Classification.b0(Classification.x_mean, Classification.y_mean, Classification.b1);
 		System.out.println("--------------------------------------------------------- ");
         System.out.println("Mean:		X1 : " + String.format("%.3g",Classification.x_mean) + "	|	Y1 : " + String.format("%.3g",Classification.y_mean) + "	|");
-        System.out.println("OffSet:		X2 : " + 0.0 + "	|	Y2 : " + String.format("%.3g",Classification.b0) + "	|");
+        System.out.println("OffSet:		X2 : " + 0.00 + "	|	Y2 : " + String.format("%.3g",Classification.b0) + "	|");
         System.out.println("---------------------------------------------------------");
         System.out.println("\nEquation of the line: y = " + String.format("%.3g",Classification.b0) + " + " + String.format("%.3g",Classification.b1) + "x");
 
@@ -21,11 +21,15 @@ public class Lab1 {
 		System.out.println();
 		Perceptron.train_model();
 		Perceptron.prediction(Perceptron.weighted_sum);
+        Perceptron.epochs();
 		System.out.println("\n------------------ Predictions -----------------------");
 		// Printing out the output after training
 		for(int i = 0; i < points.length; i++){
 			System.out.println("(x,y) = (" + points[i][0] + ", " + points[i][1] + ")" + "	desired: " + points[i][2] + "	predicted: " + Perceptron.predictions[i]);
 		}
+
+
+        
     }
 
     
