@@ -21,7 +21,7 @@ public class Lab1 {
 		System.out.println();
 		Perceptron.train_model();
 		Perceptron.prediction(Perceptron.weighted_sum);
-		System.out.println("------------------ Predictions -----------------------");
+		System.out.println("\n------------------ Predictions -----------------------");
 		// Printing out the output after training
 		for(int i = 0; i < points.length; i++){
 			System.out.println("(x,y) = (" + points[i][0] + ", " + points[i][1] + ")" + "	desired: " + points[i][2] + "	predicted: " + Perceptron.predictions[i]);

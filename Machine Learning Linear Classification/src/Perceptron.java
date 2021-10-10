@@ -29,13 +29,14 @@ public class Perceptron {
 
     // where the weighted sum will be calculated
     public static double[] train_model() {
-         //weight_decision(); //decomment when need to use when trainining the model to find the weight
+         //weight_decision(); //decomment when need to use when training the model to find the weight
 
         double x_weight = 0.32833; // it will store the value for the weight for x
-        double y_weight = 0.001; // it will store the value dor the weight for y
+        double y_weight = 0.001; // it will store the value or the weight for y
         // double x_weight = weight[0]; //decomment in case of training
         // double y_weight = weight[1]; //decomment in case of training
-
+        System.out.println("Weight_x = " + x_weight);
+        System.out.println("Weight_y = " + y_weight);
         // Weighted sum formula
         for (int i = 0; i < weighted_sum.length; i++) {
             double xw_sum = 0.0; // x * X weight
