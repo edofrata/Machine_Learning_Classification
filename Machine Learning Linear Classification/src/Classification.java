@@ -8,24 +8,15 @@ public class Classification {
     static double xmean_sum = 0.0; // x - mean of x
     static double sumX_Y = 0.0; // sum x - mean of x times sum of y - mean of y
 
-    public Classification() {
-    }
+    public Classification() {}
 
     // Printing all the variables
     public static void points_printer(Object[][] x_y) {
-
-        System.out.println("Points: ");
-        System.out.println("-------------");
-        for (Object[] x : x_y) {
-
-            for (Object y : x) {
-                System.out.print(y + " " + "|");
-            }
-
-            System.out.println();
-        }
-
-        System.out.println("-------------");
+        System.out.println("-------------- Linear Regression -------------------");
+        for(int i = 0; i < Lab1.points.length; i++){
+           
+			System.out.println("(x,y) = (" + Lab1.points[i][0] + ", " + Lab1.points[i][1] + "," +  Lab1.points[i][2] + ")");
+		}
 
     }
 
